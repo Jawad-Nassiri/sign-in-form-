@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        body {
+            height: 100vh;
+            background: #d4d1d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 60%;
+            height: 500px;
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px 50px;
+            color: #fff;
+            background: linear-gradient(90deg, #088178, #00c4a7);
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .left-panel, .right-panel {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .title {
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        .left-panel pre {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .btn {
+            outline: none;
+            border: none;
+            background: #088178;
+            color: #fff;
+            padding: 10px 30px;
+            margin-top: 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s linear;
+        }
+
+        .btn:hover {
+            background: #062927;
+        }
+
+        .image {
+            width: 400px;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 100%;
+            text-align: center;
+        }
+
+        .input-field {
+            height: 50px;
+            width: 100%;
+            background: #fdfdfd;
+            margin: 10px 0;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            border: 2px solid #088178;
+            overflow: hidden;
+            transition: all 0.3s linear;
+        }
+
+        .input-field:hover {
+            border-color: #062927;
+        }
+
+        .input-field i {
+            color: #444;
+            padding: 0 10px 0 20px;
+        }
+
+        .input-field input {
+            outline: none;
+            border: none;
+            width: 100%;
+            height: 100%;
+            color: #444;
+            font-size: 18px;
+        }
+
+        .left-panel .social-media {
+            margin: 20px 0;
+        }
+
+        .social-platforms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-platforms .social-icon {
+            margin: 0 10px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.2s linear;
+            color: #444;
+        }
+
+        .social-platforms .social-icon:hover {
+            border: 1px solid #062927;
+            color: #062927;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1400px){
+            .container {
+                width: 80%;
+            }
+        }
+
+        /* Tablet view (768px to 1024px) */
+        @media (max-width: 1024px) {
+            .container {
+                width: 80%;
+                height: auto;
+                padding: 100px;
+            }
+
+            .form-container {
+                flex-direction: column;
+            }
+
+            .left-panel, .right-panel {
+                width: 100%;
+            }
+
+            .left-panel {
+                order: 2;
+                margin-top: 30px;
+            }
+
+            .right-panel {
+                order: 1;
+            }
+
+            .image {
+                width: 300px;
+            }
+        }
+
+        /* Mobile view (below 768px) */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+
+            .form-container {
+                flex-direction: column;
+            }
+
+            .left-panel, .right-panel {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .image {
+                width: 200px;
+            }
+
+            .input-field input {
+                font-size: 16px;
+            }
+
+            .social-platforms .social-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-container">
+
+            <div class="left-panel">
+
+                <h2 class="title">Sign In</h2>
+
+                <form action="">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" required>
+                    </div>
+        
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+
+                    <input type="submit" value="Sign In" class="btn">
+
+                    <p class="social-media">Or sign up with a social platform</p>
+
+                    <div class="social-platforms">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="right-panel">
+
+                <h3 class="title">New to Brand?</h3>
+                <pre>
+If you're a new member,
+you can sign up using the button below.
+                </pre>
+
+                <a href="google.com" class="btn">Sign Up</a>
+
+                <img src="images/sign-in-form.svg" alt="welcome" class="image">
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+</html>
